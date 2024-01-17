@@ -13,6 +13,10 @@ import (
 func main() {
 	a := v1.A{
 		A: "a",
+		B: &v1.SuperSet{
+			First: 100,
+			Third: 300,
+		},
 	}
 
 	bytes, _ := proto.Marshal(&a)

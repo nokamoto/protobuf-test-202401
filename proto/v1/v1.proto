@@ -4,6 +4,12 @@ package v1;
 
 option go_package = "github.com/nokamoto/protobuf-test-202401/gen/proto/v1";
 
+message SuperSet {
+  int32 first = 1;
+  int32 third = 3;
+}
+
 message A {
   string a = 1;
+  SuperSet b = 2;
 }
