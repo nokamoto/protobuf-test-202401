@@ -13,4 +13,5 @@ message SuperSet {
 message B {
   string a = 1;
   SuperSet b = 2;
+  repeated SuperSet c = 3;
 }
