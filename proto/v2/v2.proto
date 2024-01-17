@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package v2;
+
+option go_package = "github.com/nokamoto/protobuf-test-202401/gen/proto/v2";
+
+message B {
+  string b = 1;
+}
