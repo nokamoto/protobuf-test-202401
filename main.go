@@ -29,6 +29,14 @@ func main() {
 				Third: 300 + 1,
 			},
 		},
+		D: []*v1.Wrapper{
+			{
+				Set: &v1.SuperSet{
+					First: 100 + 2,
+					Third: 300 + 2,
+				},
+			},
+		},
 	}
 
 	bytes, _ := proto.Marshal(&a)
@@ -42,6 +50,7 @@ func main() {
 	b.B.Second = 200
 	b.C[0].Second = 200
 	b.C[1].Second = 200 + 1
+	b.D[0].Fourth = 400 + 2
 
 	bytes, _ = proto.Marshal(&b)
 

@@ -9,8 +9,13 @@ message SuperSet {
   int32 third = 3;
 }
 
+message Wrapper {
+  SuperSet set = 1;
+}
+
 message A {
   string a = 1;
   SuperSet b = 2;
   repeated SuperSet c = 3;
+  repeated Wrapper d = 4;
 }
