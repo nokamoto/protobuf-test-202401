@@ -76,4 +76,89 @@ diff v2.B -> v1.A
 +               s"{set:{first:102  third:302}  2:402}",
         },
   }))
+
+a v1.A
+{
+  "a":  "a",
+  "b":  {
+    "first":  100,
+    "third":  300
+  },
+  "c":  [
+    {
+      "first":  100,
+      "third":  300
+    },
+    {
+      "first":  101,
+      "third":  301
+    }
+  ],
+  "d":  [
+    {
+      "set":  {
+        "first":  102,
+        "third":  302
+      }
+    }
+  ]
+}
+
+b v1.B
+{
+  "a":  "a",
+  "b":  {
+    "first":  100,
+    "second":  200,
+    "third":  300
+  },
+  "c":  [
+    {
+      "first":  100,
+      "second":  200,
+      "third":  300
+    },
+    {
+      "first":  101,
+      "second":  201,
+      "third":  301
+    }
+  ],
+  "d":  [
+    {
+      "set":  {
+        "first":  102,
+        "third":  302
+      },
+      "fourth":  402
+    }
+  ]
+}
+
+a2 v1.A
+{
+  "a":  "a",
+  "b":  {
+    "first":  100,
+    "third":  300
+  },
+  "c":  [
+    {
+      "first":  100,
+      "third":  300
+    },
+    {
+      "first":  101,
+      "third":  301
+    }
+  ],
+  "d":  [
+    {
+      "set":  {
+        "first":  102,
+        "third":  302
+      }
+    }
+  ]
+}
 ```

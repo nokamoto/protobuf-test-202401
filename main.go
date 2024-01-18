@@ -6,13 +6,12 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/nokamoto/protobuf-test-202401/gen/proto/v1"
 	v2 "github.com/nokamoto/protobuf-test-202401/gen/proto/v2"
+	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/testing/protocmp"
 )
 
 func main() {
-	fmt.Println("diff v1.A -> v2.B")
-
 	a := v1.A{
 		A: "a",
 		B: &v1.SuperSet{
@@ -39,6 +38,8 @@ func main() {
 		},
 	}
 
+	fmt.Println("diff v1.A -> v2.B")
+
 	bytes, _ := proto.Marshal(&a)
 
 	var b v2.B
@@ -57,4 +58,15 @@ func main() {
 	var a2 v1.A
 	proto.Unmarshal(bytes, &a2)
 	fmt.Println(cmp.Diff(&b, &a2, protocmp.Transform()))
+
+	fmt.Println("a v1.A")
+	fmt.Println(protojson.Format(&a))
+	fmt.Println()
+
+	fmt.Println("b v1.B")
+	fmt.Println(protojson.Format(&b))
+	fmt.Println()
+
+	fmt.Println("a2 v1.A")
+	fmt.Println(protojson.Format(&a2))
 }
