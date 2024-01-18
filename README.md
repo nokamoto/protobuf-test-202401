@@ -38,6 +38,10 @@ diff v1.A -> v2.B
                         },
                 },
         },
+        "e": []protocmp.Message{
+-               s"{first:103  third:303}",
++               s"{1:103  3:303}",
+        },
   }))
 
 diff v2.B -> v1.A
@@ -75,6 +79,10 @@ diff v2.B -> v1.A
 -               s"{set:{first:102  third:302}  fourth:402}",
 +               s"{set:{first:102  third:302}  2:402}",
         },
+        "e": []protocmp.Message{
+-               s"{fourth:403  1:103  3:303}",
++               s"{first:103  third:303  2:403}",
+        },
   }))
 
 a v1.A
@@ -100,6 +108,12 @@ a v1.A
         "first":  102,
         "third":  302
       }
+    }
+  ],
+  "e":  [
+    {
+      "first":  103,
+      "third":  303
     }
   ]
 }
@@ -132,6 +146,11 @@ b v1.B
       },
       "fourth":  402
     }
+  ],
+  "e":  [
+    {
+      "fourth":  403
+    }
   ]
 }
 
@@ -158,6 +177,12 @@ a2 v1.A
         "first":  102,
         "third":  302
       }
+    }
+  ],
+  "e":  [
+    {
+      "first":  103,
+      "third":  303
     }
   ]
 }

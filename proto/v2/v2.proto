@@ -20,4 +20,5 @@ message B {
   SuperSet b = 2;
   repeated SuperSet c = 3;
   repeated Wrapper d = 4;
+  repeated Wrapper e = 5;
 }

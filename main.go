@@ -36,6 +36,12 @@ func main() {
 				},
 			},
 		},
+		E: []*v1.SuperSet{
+			{
+				First: 100 + 3,
+				Third: 300 + 3,
+			},
+		},
 	}
 
 	fmt.Println("diff v1.A -> v2.B")
@@ -52,6 +58,7 @@ func main() {
 	b.C[0].Second = 200
 	b.C[1].Second = 200 + 1
 	b.D[0].Fourth = 400 + 2
+	b.E[0].Fourth = 400 + 3
 
 	bytes, _ = proto.Marshal(&b)
 
